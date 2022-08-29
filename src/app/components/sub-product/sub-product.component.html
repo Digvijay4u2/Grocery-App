@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<h2 class="text-center">Sub products</h2>
+<div class="row "  style="background-color:rgb(181, 219, 219)">
+    <div class="col-sm-3" *ngFor="let sub of subProduct">
+      <div class="card" style="padding:20px; margin:20px ; background-color: rgb(255, 253, 250);">
+        <div class="card-body">
+            <img src="{{'http://rjtmobile.com/grocery/images/'+sub.image}}" class="card-img-top" alt="">
+          <h5 class="card-title text-center">{{sub.productName}}</h5>
+          <h5>Amount  : {{sub.unit}}</h5>
+          <h2>
+            {{sub.price | currency :'INR'}}
+            <span class="mrp">
+                <del>
+                    {{sub.mrp |currency :'INR'}}
+                </del>
+
+            </span>
+        </h2>
+        <br>
+        <button class="btn btn-primary text-center" style="margin:20px 0 0 40px">add to cart</button><br>
+        <button class="btn btn-success" style="margin:20px 0 0 60px">Buy</button>
+        <button class="btn btn-success " routerLink="{{'/product_detail/'+sub._id}}" routerLinkActive="active" style="margin:10px 0 0 40px" >View detail</button>
+
+        
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>

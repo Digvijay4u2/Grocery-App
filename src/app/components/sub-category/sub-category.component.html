@@ -1,0 +1,11 @@
+<h2 class="text-center">Subcategory</h2>
+<div class="container" >
+<ul>
+    <li *ngFor="let subCategory of subCategories">
+        <!-- <h2>{{subCategory.subId}}</h2> -->
+        <!-- <h3 style="color:green">{{subCategory.subName}}{{subCategory.subId}}</h3> -->
+        <button class="btn btn-success" style="margin:10px" (click)="onClickHandle(subCategory)" >{{subCategory.subName}}</button>
+
+    </li>
+</ul>
+</div>

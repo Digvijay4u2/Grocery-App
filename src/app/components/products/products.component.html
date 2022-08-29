@@ -1,0 +1,29 @@
+<h2 class="text-center">All products</h2>
+<div class="row " >
+    <div class="col-sm-4" *ngFor="let product of products">
+      <div class="card" style="padding:20px">
+        <div class="card-body">
+            <img src="{{'http://rjtmobile.com/grocery/images/'+product.image}}" class="card-img-top" alt="">
+          <h5 class="card-title text-center">{{product.productName}}</h5>
+          <h5>Amount  : {{product.unit}}</h5>
+          <h2>
+            {{product.price | currency :'INR'}}
+            <span class="mrp">
+                <del>
+                    {{product.mrp |currency :'INR'}}
+                </del>
+
+            </span>
+        </h2>
+        <br>
+        <!-- <button class="btn btn-primary text-center" style="margin:20px 0 0 40px">add to cart</button><br>
+        <button class="btn btn-success" style="margin:20px 0 0 60px">Buy</button> -->
+        <button class="btn btn-success " routerLink="{{'/product_detail/'+product._id}}" routerLinkActive="active" style="margin:10px 0 0 40px" >View detail</button>
+
+        
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>

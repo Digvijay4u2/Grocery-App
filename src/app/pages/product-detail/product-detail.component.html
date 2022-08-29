@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="wrapper">
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="{{'http://rjtmobile.com/grocery/images/'+product.image}}" class="card-img-top" alt="">
+        </div>
+        <div class="col-lg-6">
+            <h3>{{product.productName}}</h3>
+            <p> Amount : {{product.unit}}</p>
+            <p>{{product.description}}</p>
+            <br>
+            <h2>
+                {{product.price | currency :'INR'}}
+                <span class="mrp">
+                    <del>
+                        {{product.mrp |currency :'INR'}}
+                    </del>
+
+                </span>
+            </h2>
+            <br>
+            <button class="btn btn-primary">add to cart</button>
+        </div>
+    </div>
+</div>
+    
+</div>

@@ -1,0 +1,16 @@
+
+<div class="row text-center" >
+    <div class="col-sm-3" *ngFor="let category of categories">
+      <div class="card">
+        <div class="card-body">
+            <img src="{{'http://rjtmobile.com/grocery/images/'+category.catImage}}" class="card-img-top" alt="">
+          <h5 class="card-title">{{category.catName}}</h5>
+          <h5 class="card-title">{{category.catId}}</h5>
+          <!-- <a href="#" class="btn btn-primary" (click)="onClickHandler('{{category.catId}}')" >Click to view</a> -->
+          <button class="btn btn-success" style="margin:10px" (click)="onClickHandler(category)" >Click to view</button>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
